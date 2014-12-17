@@ -1,0 +1,69 @@
+@import 'compass';
+@import 'compass-fluid-video';
+@import 'bourbon/bourbon';
+@import 'base/grid-settings';
+@import 'neat/neat';
+@import 'base/base';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+
+$mobile: new-breakpoint(max-width 480px 4);
+$tablet: new-breakpoint(max-width 768px 8);
+
+
+body {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+//    @include background-image(url("http://foundation.zurb.com/assets/img/homepage/hero-image.svg"), linear-gradient(#cf3a8c 100%, transparent 5%));
+    background-color: hsla(327, 61%, 52%, 1);
+//    @include background(linear-gradient(to bottom right, #333, #0c0), radial-gradient(#c00, #fff 100px));
+    
+    
+    .header {
+        @include span-columns(8);
+        @include omega();
+        @include shift(1);
+        @include media($mobile) {
+            @include span-columns(3);
+        }
+            
+        @inlcude media($tablet) {
+            @include span-columns(5);
+        }
+             
+        color: white;
+        
+        p.brand {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 80px;
+            
+            &:hover {
+                @include animation(scale 1.0s ease-in, slide 2.0s ease);
+            }
+        }
+        
+        
+        p.message {
+            margin-top: -20px;
+            font-family: 'Indie Flower', cursive;
+            font-size: 45px;
+            @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
+        }
+        
+
+    }
+    
+    .vimeo {
+        @include span-columns(9);
+        @include shift(1);
+        @include omega();
+        @include fluid-video;
+        
+        
+    }
+    
+    
+}

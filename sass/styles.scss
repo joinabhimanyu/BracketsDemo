@@ -1,0 +1,97 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import url(http://fonts.googleapis.com/css?family=Just+Another+Hand);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Chango);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+
+body {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(360, 100%, 100%, 1);
+//    background-image: url('http://foundation.zurb.com/assets/img/homepage/hero-image.svg');
+//    @include background-image(radial-gradient(circle at 99% 1%, #05AAFC 5%, #05AAFC 30%, darken(#13B7F2, 10%)));
+//    @include background-image(linear-gradient(#53aee0, #3da4dc));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+//    font-family: 'Chango', cursive;
+    
+    #banner {
+        margin-left: -10px;
+    }
+    
+    
+    .jumbotron {
+        backface-visibility: visible;
+        visibility: hidden;
+        margin-left: -70px;
+        margin-top: -40px;
+        
+        .jumbo-content {
+            visibility: visible;
+            
+            h1 {
+                font-family: 'Lobster', cursive;
+                font-size: 72px;
+            }
+            
+            p.jumbo-desc {
+                margin-left: 10px;
+                margin-top: 20px;
+            }
+            
+            a {
+                margin-top: 8px;
+                font-weight: bold;
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                @include button(shiny, #11D6F5);
+            }
+            
+        }
+        
+    }
+    
+    h1{
+        font-family: 'Lobster', cursive;
+        font-size: 72px;
+    }
+    
+    h3 {
+        font-family: 'Lobster', cursive;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    #features {
+        margin-top: -50px;
+        
+        p {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 400;
+            font-size: 20px;
+            margin-top: 8px;
+            
+            a {
+                font-family: 'Ubuntu', sans-serif;
+                @include button(shiny, hsla(360, 87%, 65%, 1));
+                margin-top: 25px;
+            }
+            
+        }
+        
+        #live a {
+            margin-top: 0px;
+        }
+        
+    }
+    
+}

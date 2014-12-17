@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foundation</title>
+        <script src="js/curl.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            
+            curl(
+                    [
+                        'css!css/foundation.min.css',
+                        'css!css/foundationStyles.css',
+                        'js!js/jquery-1.10.2.min.js!order',
+                        'js!js/underscore.js!order',
+                        'js!js/foundation.min.js'
+                    ]
+            ).then(function(link) {
+                console.log('Resources loaded');
+            },
+                   function(ex) {
+                console.log(ex.message);
+            });
+            
+        </script>
+        
+    </head>
+    <body>
+        <div class="header">
+            <p class="brand">Foundation</p>
+            <p class="message">The most advanced responsive front-end framework in the world.</p>
+            <ul class="button-group">
+                <li><a href="#" class="button [secondary success alert]">Learn More</a></li>
+                
+            </ul>
+            
+        </div>
+        <div class="vimeo">
+            <iframe src="http://player.vimeo.com/video/90388983" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/90388983">AngularJS: The Awesome Parts</a> from <a href="http://vimeo.com/jsla">JSLA</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        </div>
+    </body>
+</html>
